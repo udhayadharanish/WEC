@@ -149,7 +149,7 @@
     scroll-behavior: smooth!important;
 }
 
-.fa-xmark::before{
+.product-service-wrapper .fa-xmark::before{
     color: red;
 }
 
@@ -186,6 +186,22 @@
 @keyframes spin{0%{-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}
 @keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
 
+</style>
+<style>
+    .mobile-menu-main li a{
+        display: flex!important;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    @media (max-width:720px) {
+        .title-top .title{
+            font-size: 40px!important;
+            line-height: 40px;
+        }
+        .sub-title{
+            font-size: 40px!important;
+        }
+    }
 </style>
 
 <body>
@@ -1959,77 +1975,65 @@ $('.ab-form').slideDown()" >Talk to us</a>
         <div class="mobile-menu-main">
             <nav class="nav-main mainmenu-nav mt--30">
                 <ul class="mainmenu metismenu" id="mobile-menu-active">
-                    <li class="has-droupdown">
-                        <a href="#" class="main">Home</a>
-                        <ul class="submenu mm-collapse">
-                            <li><a class="mobile-menu-link" href="index.html">SEO Marketing</a></li>
-                            <li><a class="mobile-menu-link" href="index-two.html">Digital Marketing</a></li>
-                            <li><a class="mobile-menu-link" href="index-three.html">Digital Agency</a></li>
-                            <li><a class="mobile-menu-link" href="index-four.html">Startup Agency</a></li>
-                            <li><a class="mobile-menu-link" href="index-five.html">Advertising Agency</a></li>
-                            <li><a class="mobile-menu-link" href="index-six.html">Web Design Agency</a></li>
-                            <li><a class="mobile-menu-link" href="index-seven.html">Social Media Agency</a></li>
-                            <li><a class="mobile-menu-link" href="index-eight.html">SEO Agency</a></li>
-                        </ul>
+                    <li class="">
+                        <a href="/" class="main">Home</a>
+                        
+                    </li>
+                    <li class="">
+                        <a href="#ai-agents" class="main">AI Agents</a>
+                        
                     </li>
                     <li class="has-droupdown">
-                        <a href="#" class="main">Pages</a>
+                        <a href="#customer-service" class="main">Services</a>
                         <ul class="submenu mm-collapse">
-                            <li><a class="mobile-menu-link" href="about.html">About</a></li>
-                            <li><a class="mobile-menu-link" href="team.html">Our Team</a></li>
-                            <li><a class="mobile-menu-link" href="faq.html">FAQ's</a></li>
-                            <li><a class="mobile-menu-link" href="book-a-demo.html">Book a Demo</a></li>
-                            <li><a class="mobile-menu-link" href="free-audit.html">Free Audit</a></li>
-                            <li><a class="mobile-menu-link" href="pricing.html">Pricing Plans</a></li>
-                            <li><a class="mobile-menu-link" href="404.html">404 Page</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-droupdown">
-                        <a href="#" class="main">Services</a>
-                        <ul class="submenu mm-collapse">
-                            <li><a class="mobile-menu-link" href="service.html">Services</a></li>
-                            <li class="has-droupdown third-lvl">
-                                <a class="main" href="#">Service Details</a>
-                                <ul class="submenu-third-lvl mm-collapse">
-                                    <li><a href="service-details.html"></a>Paid Search Marketing</li>
-                                    <li><a href="email-marketing.html"></a>Email Marketing</li>
-                                    <li><a href="social-media-marketing.html"></a>Social Media Marketing</li>
-                                    <li><a href="influencer-marketing.html"></a>Influencer Marketing</li>
-                                </ul>
+                            <li>
+                                <a class="nav-link page" href="#customer-service">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="5" fill="#ECEBFC"></rect><path d="M9.38505 17.926C8.44187 18.4525 5.96891 19.5276 7.47511 20.8729C8.21087 21.53 9.03033 22 10.0606 22H15.9395C16.9697 22 17.7892 21.53 18.5249 20.8729C20.0311 19.5276 17.5582 18.4525 16.615 17.926C14.4032 16.6913 11.5968 16.6913 9.38505 17.926Z" stroke="#27272A" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 11C16 12.6569 14.6568 14 13 14C11.3431 14 10 12.6569 10 11C10 9.34314 11.3431 8 13 8C14.6568 8 16 9.34314 16 11Z" stroke="#27272A"></path><path d="M19 10H23" stroke="#27272A" stroke-linecap="round" stroke-linejoin="round"></path><path d="M19 12H23" stroke="#27272A" stroke-linecap="round" stroke-linejoin="round"></path><path d="M21 14H23" stroke="#27272A" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                    <p>Customer Service</p>
+                                </a>
                             </li>
-                        </ul>
-                    </li>
-                    <li class="has-droupdown">
-                        <a href="#" class="main">Work</a>
-                        <ul class="submenu mm-collapse">
-                            <li><a class="mobile-menu-link" href="case-studies.html">Case Studies</a></li>
-                            <li><a class="mobile-menu-link" href="single-case-studies.html">Case Studies Details</a>
+                            <li>
+                                <a class="nav-link page" href="#banking">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="5" fill="#ECEBFC"></rect><path d="M5 11.5691C5 10.3729 5.48238 9.63982 6.48063 9.08428L10.5899 6.79744C12.7431 5.59915 13.8197 5 15 5C16.1803 5 17.2569 5.59915 19.4101 6.79744L23.5194 9.08428C24.5176 9.63982 25 10.3729 25 11.5691C25 11.8934 25 12.0556 24.9646 12.1889C24.7785 12.8895 24.1437 13 23.5307 13H6.46928C5.85627 13 5.22152 12.8894 5.03542 12.1889C5 12.0556 5 11.8934 5 11.5691Z" stroke="black"></path><path d="M14.9958 10H15.0048" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 13V21.5M11 13V21.5" stroke="black"></path><path d="M19 13V21.5M23 13V21.5" stroke="black"></path><path d="M22 21.5H8C6.34315 21.5 5 22.8431 5 24.5C5 24.7761 5.22386 25 5.5 25H24.5C24.7761 25 25 24.7761 25 24.5C25 22.8431 23.6569 21.5 22 21.5Z" stroke="black"></path></svg>
+                                    <p>Banking</p>
+                                </a>
                             </li>
+                            <li>
+                                <a class="nav-link page" href="#financial-service">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="5" fill="#ECEBFC"></rect><path d="M23.9427 19.8354C23.2864 15.8866 21.2432 12.9461 19.467 11.219C18.9501 10.7164 18.6917 10.4651 18.1208 10.2326C17.5499 10 17.0592 10 16.0778 10H13.9222C12.9408 10 12.4501 10 11.8792 10.2326C11.3083 10.4651 11.0499 10.7164 10.533 11.219C8.75682 12.9461 6.71361 15.8866 6.05727 19.8354C5.56893 22.7734 8.27927 25 11.3083 25H18.6917C21.7207 25 24.4311 22.7734 23.9427 19.8354Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10.2566 7.44287C10.0503 7.14258 9.75128 6.73499 10.369 6.64205C11.0039 6.54651 11.6632 6.98114 12.3085 6.97221C12.8924 6.96413 13.1898 6.70519 13.5089 6.33548C13.8449 5.94617 14.3652 5 15 5C15.6348 5 16.1551 5.94617 16.4911 6.33548C16.8102 6.70519 17.1076 6.96413 17.6914 6.97221C18.3368 6.98114 18.9961 6.54651 19.631 6.64205C20.2487 6.73499 19.9497 7.14258 19.7434 7.44287L18.8105 8.80064C18.4115 9.38146 18.212 9.67187 17.7944 9.83594C17.3769 10 16.8373 10 15.7582 10H14.2418C13.1627 10 12.6231 10 12.2056 9.83594C11.788 9.67187 11.5885 9.38146 11.1895 8.80064L10.2566 7.44287Z" stroke="black" stroke-linejoin="round"></path><path d="M16.6267 15.9186C16.4105 15.1205 15.3101 14.4003 13.9892 14.9391C12.6683 15.4778 12.4585 17.2113 14.4565 17.3955C15.3595 17.4787 15.9483 17.2989 16.4873 17.8076C17.0264 18.3162 17.1265 19.7308 15.7485 20.112C14.3705 20.4932 13.006 19.8976 12.8574 19.0517M14.8417 13.9927V14.7531M14.8417 20.2293V20.9927" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                    <p>Financial Service</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link page" href="#sales">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="5" fill="#ECEBFC"></rect><path d="M5 17C5 13.4934 5 11.74 5.90796 10.5599C6.07418 10.3439 6.25989 10.1458 6.46243 9.96849C7.56878 9 9.21252 9 12.5 9H17.5C20.7875 9 22.4312 9 23.5376 9.96849C23.7401 10.1458 23.9258 10.3439 24.092 10.5599C25 11.74 25 13.4934 25 17C25 20.5066 25 22.26 24.092 23.4401C23.9258 23.6561 23.7401 23.8542 23.5376 24.0315C22.4312 25 20.7875 25 17.5 25H12.5C9.21252 25 7.56878 25 6.46243 24.0315C6.25989 23.8542 6.07418 23.6561 5.90796 23.4401C5 22.26 5 20.5066 5 17Z" stroke="black"></path><path d="M19 9C19 7.11438 19 6.17157 18.4142 5.58579C17.8284 5 16.8856 5 15 5C13.1144 5 12.1716 5 11.5858 5.58579C11 6.17157 11 7.11438 11 9" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15 14C13.8954 14 13 14.6716 13 15.5C13 16.3284 13.8954 17 15 17C16.1046 17 17 17.6716 17 18.5C17 19.3284 16.1046 20 15 20M15 14C15.8708 14 16.6116 14.4174 16.8862 15M15 14V13M15 20C14.1292 20 13.3884 19.5826 13.1138 19M15 20V21" stroke="black" stroke-linecap="round"></path><path d="M9 15H5" stroke="black" stroke-linecap="round"></path><path d="M25 15H21" stroke="black" stroke-linecap="round"></path></svg>
+                                    <p>Sales</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link page" href="#marketing">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="5" fill="#ECEBFC"></rect><path d="M20 20.0001C21.8409 20.0001 23.3333 17.0153 23.3333 13.3334C23.3333 9.65152 21.8409 6.66675 20 6.66675C18.159 6.66675 16.6667 9.65152 16.6667 13.3334C16.6667 17.0153 18.159 20.0001 20 20.0001Z" stroke="#27272A"></path><path d="M20 6.66675C17.4141 6.66675 12.0543 8.64809 8.97586 9.87818C7.56617 10.4415 6.66666 11.8153 6.66666 13.3334C6.66666 14.8515 7.56617 16.2253 8.97586 16.7887C12.0543 18.0187 17.4141 20.0001 20 20.0001" stroke="#27272A"></path><path d="M14.1667 23.3333L12.5473 22.4419C10.7841 21.4714 9.78878 19.5112 10.0379 17.5" stroke="#27272A" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                   <p>Marketing</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link page" href="#hr">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="5" fill="#ECEBFC"></rect><path d="M17 5H13C9.72077 5 8.08116 5 6.91891 5.81382C6.48891 6.1149 6.1149 6.48891 5.81382 6.91891C5 8.08116 5 9.72077 5 13C5 16.2792 5 17.9188 5.81382 19.0811C6.1149 19.5111 6.48891 19.8851 6.91891 20.1862C8.08116 21 9.72077 21 13 21H17C20.2792 21 21.9188 21 23.0811 20.1862C23.5111 19.8851 23.8851 19.5111 24.1862 19.0811C25 17.9188 25 16.2792 25 13C25 9.72077 25 8.08116 24.1862 6.91891C23.8851 6.48891 23.5111 6.1149 23.0811 5.81382C21.9188 5 20.2792 5 17 5Z" stroke="black" stroke-linecap="round"></path><path d="M17.5 25L17.1845 24.5811C16.4733 23.6369 16.2969 22.1944 16.7468 21M12.5 25L12.8155 24.5811C13.5267 23.6369 13.7031 22.1944 13.2532 21" stroke="black" stroke-linecap="round"></path><path d="M10 25H20" stroke="black" stroke-linecap="round"></path><path d="M11 17C12.8385 14.4046 17.1188 14.263 19 17M17 11C17 12.1046 16.1046 13 15 13C13.8954 13 13 12.1046 13 11C13 9.89543 13.8954 9 15 9C16.1046 9 17 9.89543 17 11Z" stroke="black" stroke-linecap="round"></path></svg>
+                                    <p>HR</p>
+                                </a>
+                            </li>
+                            
                         </ul>
                     </li>
-                    <li class="has-droupdown">
+                    <li class="">
                         <a href="#" class="main">Blog</a>
-                        <ul class="submenu mm-collapse">
-                            <li><a class="mobile-menu-link" href="blog.html">Blog</a></li>
-                            <li><a class="mobile-menu-link" href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                            <li><a class="mobile-menu-link" href="blog-grid.html">Blog Grid</a></li>
-                            <li><a class="mobile-menu-link" href="blog-grid-2.html">Blog Grid Right Sidebar</a></li>
-                            <li><a class="mobile-menu-link" href="blog-grid-3.html">Blog Grid Left Sidebar</a></li>
-                            <li><a class="mobile-menu-link" href="blog-details.html">Blog Details</a></li>
-                        </ul>
+                        
                     </li>
-                    <li>
-                        <a href="contact.html" class="main">Contact Us</a>
-                    </li>
+                    
                 </ul>
             </nav>
 
-            <ul class="social-area-one pl--20 mt--100">
-                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-            </ul>
+            
         </div>
         <!-- mobile menu area end -->
     </div>
