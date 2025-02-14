@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" data-theme="light">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png">
-    <title>WEC AI</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
+    <title>Wec.ai</title>
     <!-- swiper css -->
     <link rel="stylesheet preload" href="assets/css/plugins/swiper.min.css" as="style">
     <!-- magnific popup css -->
@@ -18,7 +18,7 @@
     <link rel="stylesheet preload" href="assets/css/plugins/fontawesome.min.css" as="style">
     <!-- Custom css -->
     <link rel="stylesheet preload" href="assets/css/style.css" as="style">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <style>
@@ -149,10 +149,101 @@
     scroll-behavior: smooth!important;
 }
 
+.fa-xmark::before{
+    color: red;
+}
+
+
+
+
+</style>
+
+<style>
+    /*! CSS Used from: https://contri.ai/static/assets/css/vendor/bootstrap.min.css */
+
+.contact-form .single-input-area{margin-bottom:24px;}
+.contact-form .single-input-area label{font-size:16px;font-style:normal;font-weight:400;line-height:164%;letter-spacing:-0.32px;margin-bottom:12px;}
+.contact-form .single-input-area input{height:56px;padding:15px;color:var(--color-body);}
+.contact-form .single-input-area textarea{height:224px;padding:15px;color:var(--color-body);}
+.rts-contact-form-area.contact-form-page .contact-form .single-input-area{position:relative;}
+.rts-contact-form-area.contact-form-page .contact-form .single-input-area i{position:absolute;left:15px;top:63%;}
+.rts-contact-form-area.contact-form-page .contact-form .single-input-area input,.rts-contact-form-area.contact-form-page .contact-form .single-input-area textarea{padding-left:35px;}
+.rts-contact-form-area.contact-form-page .contact-form .single-input-area input::placeholder,.rts-contact-form-area.contact-form-page .contact-form .single-input-area textarea::placeholder{color:#717383;}
+.rts-contact-form-area.contact-form-page .contact-form .single-input-area.text-area i{top:61px!important;}
+.rts-contact-form-area.contact-form-page .contact-form button{width:100%;max-width:100%;padding:16px 0;}
+.rts-contact-form-area.contact-form-page .contact-form button i{color:#fff;padding-left:10px;}
+/*! CSS Used from: https://contri.ai/static/assets/css/mycss.css */
+.ab-form{position:absolute;top:350px;width:100%;z-index:9999;background-color:transparent;display:none;}
+.cancel{position:absolute;top:20px;right:20px;cursor:pointer;}
+.cancel img{height:30px;width:30px;}
+#form-sb:disabled{background-color:gray;}
+#form-sb:disabled:hover{background-color:gray;}
+#form-sb{position:relative;}
+.load{display:none;align-items:center;justify-content:center;position:absolute;height:100%;width:100%;z-index:99999;top:0;left:0;background-color:aliceblue;}
+.load img{height:30px;width:30px;animation-timing-function:ease-in-out;animation-name:spin;animation-iteration-count:infinite;animation-duration:1s;}
+/*! CSS Used keyframes */
+@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}
+@keyframes spin{0%{-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}
+@keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+
 </style>
 
 <body>
+    <div class="rts-contact-form-area contact-form-page rts-section-gapBottom ab-form" style="display: none;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <form class="contact-form" id="contact-form" >
+                        <div class="cancel" id="cancel-form" onclick="$('.ab-form').slideUp();">
+                            <img src="./assets/cancel.svg" alt="">
+                        </div>
+                        
+                        <div class="single-input-area">
+                            <label for="entry.2120157554">Full name</label>
+                            <input id="name" type="text" name="name" placeholder="Your name" required=""> 
+                            <i class="fa-regular fa-user"></i>
+                        </div>
 
+                        <div class="single-input-area">
+                            <label for="entry.2065316609">Email</label>
+                            <input id="email" type="email" name="email" placeholder="Your email" required="">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        
+                        <div class="single-input-area">
+                            <label for="entry.563813798">Number</label>
+                            <input id="tel" type="number" name="number" placeholder="Your phone number enter with country code" required="">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        
+                        <div class="single-input-area text-area">
+                            <label for="entry.390444232">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Your message"></textarea>
+                            <i class="fa-regular fa-message"></i>
+                        </div>
+                        
+                        
+                        <button type="submit" class="rts-btn btn-primary" id="form-sb">
+
+                            
+                            Send Message
+                            <i class="fa-solid fa-location-arrow"></i>
+                            
+                            <div class="load" id="load">
+                                <img src="./assets/loading.png" alt="" height="20">
+                            </div>
+
+                        </button>
+                        <!-- message send confirmation -->
+                        <div id="form-info" class="text-center text-primary mt-5 text-capitalize">
+                    
+
+                </div></form>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- header three area start -->
     <header class="header-three header--sticky">
         <div class="container">
@@ -255,7 +346,7 @@
                                     <!-- <li class="menu-item"><a class="main-element fluxi-dropdown-main-element" href="contact.html">Contact</a></li> -->
                                 </ul>
                             </nav>
-                            <a href="#" class="rts-btn btn-primary-3">Talk to us</a>
+                            <a href="#" class="rts-btn btn-primary-3" onclick="$('.ab-form').slideDown()" >Talk to us</a>
                             <div class="menu-btn" id="menu-btn">
 
                                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
@@ -419,55 +510,7 @@
     </div>
     <!-- rts service area end -->
 
-    <div class="brand-area-start title-three-brand-wrapper pb--125">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="title">Trusted by top companies</p>
-                    <div class="brand-area-main-wrapper-two">
-                        <div class="light swiper mySwiper-brand-3">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="assets/images/brand/11.svg" alt="brand"></a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="assets/images/brand/12.svg" alt="brand"></a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="assets/images/brand/13.svg" alt="brand"></a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="assets/images/brand/14.svg" alt="brand"></a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="assets/images/brand/15.svg" alt="brand"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dark swiper mySwiper-brand-3">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="assets/images/brand/21.svg" alt="brand"></a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="assets/images/brand/22.svg" alt="brand"></a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="assets/images/brand/23.svg" alt="brand"></a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="assets/images/brand/24.svg" alt="brand"></a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#"><img src="assets/images/brand/21.svg" alt="brand"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <!-- rts service area start -->
     <div class="rts-product-area">
@@ -596,13 +639,14 @@
                 </div>
                 <div id="customer-service"></div>
             </div>
+            
         </div>
     </div>
     <!-- rts service area end -->
-    <!-- 1 -->
+    <!-- 1 customer-->
     
-    <div class="rts-service-banner-area inner pb--125">
-        <div class="container">
+    <div class="rts-service-banner-area inner pb--65">
+        <div class="container pt--65 section-separator-top-bg-white">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-service-page-area-top text-center pt-0">
@@ -801,7 +845,9 @@
                             </svg>
 
                         </div>
+                        
                         <h6 class="title">Chatbot Integration Agent</h6>
+
                         <p class="disc">
                             Offer real-time solutions via live chat.
                         </p>
@@ -809,7 +855,7 @@
                     </div>
                     <!-- single-service-end -->
                 </div>
-            
+                
              </div>
              <div id="banking"></div>
         </div>
@@ -823,12 +869,12 @@
         </div>
         <!-- banner shape service end -->
     </div>
-
+    
     
 
     <!-- 2 banking -->
-    <div class="rts-service-banner-area inner pb--125">
-        <div class="container">
+    <div class="rts-service-banner-area inner pb--65">
+        <div class="container pt--65 section-separator-top-bg-white">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-service-page-area-top text-center pt-0">
@@ -1038,8 +1084,8 @@
 
 
     <!-- 3 financial-->
-    <div class="rts-service-banner-area inner pb--125">
-        <div class="container">
+    <div class="rts-service-banner-area inner pb--65 ">
+        <div class="container pt--65 section-separator-top-bg-white">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-service-page-area-top text-center pt-0">
@@ -1317,8 +1363,8 @@
 
 
     <!-- 4 sales-->
-    <div class="rts-service-banner-area inner pb--125">
-        <div class="container">
+    <div class="rts-service-banner-area inner pb--65 ">
+        <div class="container pt--65 section-separator-top-bg-white">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-service-page-area-top text-center pt-0">
@@ -1508,8 +1554,8 @@
     </div>
 
     <!-- 5 marketing -->
-    <div class="rts-service-banner-area inner pb--125">
-        <div class="container">
+    <div class="rts-service-banner-area inner pb--65 ">
+        <div class="container pt--65 section-separator-top-bg-white">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-service-page-area-top text-center pt-0">
@@ -1601,7 +1647,7 @@
                     <!-- single-service- -->
                     <div class="service-page-service-style">
                         <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="60" height="60t" viewBox="0 0 217.000000 216.000000" preserveAspectRatio="xMidYMid meet">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="60" height="60" viewBox="0 0 217.000000 216.000000" preserveAspectRatio="xMidYMid meet">
                                 <metadata>
                                 Created by potrace 1.16, written by Peter Selinger 2001-2019
                                 </metadata>
@@ -1683,8 +1729,8 @@
 
 
     <!-- 6 hr -->
-    <div class="rts-service-banner-area inner pb--125">
-        <div class="container">
+    <div class="rts-service-banner-area inner pb--65 ">
+        <div class="container pt--65 section-separator-top-bg-white">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-service-page-area-top text-center pt-0">
@@ -1852,7 +1898,7 @@
 
     <!-- rts cta area start -->
     <div class="rts-cta-area-start area-3 rts-section-gapBottom">
-        <div class="container">
+        <div class="container pb--65 section-separator-top-bg-white">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="cta-main-wrapper-style-box">
@@ -1883,80 +1929,12 @@
     <!-- rts cta area start end -->
 
     <!-- rts footer start two -->
-    <div class="rts-footer-area footer-three footer-four bg-dark-p rts-section-gap">
-        <div class="container mb--65">
-            <div class="row g-48 g-lg-0">
-                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                    <!-- single footer four wized -->
-                    <div class="single-footer-four-wized">
-                        <h5 class="title">Company</h5>
-                        <ul>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">We hire</a></li>
-                            <li><a href="#">Insights</a></li>
-                        </ul>
-                    </div>
-                    <!-- single footer four wized end -->
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                    <!-- single footer four wized -->
-                    <div class="single-footer-four-wized">
-                        <h5 class="title">Resources</h5>
-                        <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Help center</a></li>
-                            <li><a href="#">Ask for support</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                    <!-- single footer four wized end -->
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                    <!-- single footer four wized -->
-                    <div class="single-footer-four-wized">
-                        <h5 class="title">Social</h5>
-                        <ul>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Linkedin</a></li>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Instagram</a></li>
-                        </ul>
-                    </div>
-                    <!-- single footer four wized end -->
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                    <!-- single footer four wized -->
-                    <div class="single-footer-four-wized">
-                        <h5 class="title">Legal</h5>
-                        <ul>
-                            <li><a href="terms.html">Terms of service</a></li>
-                            <li><a href="privacy-policy.html">Privacy policy</a></li>
-                            <li><a href="#">Cookies</a></li>
-                            <li><a href="#">Sitemap</a></li>
-                        </ul>
-                    </div>
-                    <!-- single footer four wized end -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                    <!-- single footer four wized -->
-                    <div class="single-footer-four-wized">
-                        <h5 class="title">Newsletter</h5>
-                        <div class="footer-input-btn-between">
-                            <form action="#">
-                                <input required type="email" placeholder="Your email..">
-                                <i class="fa-regular fa-envelope"></i>
-                                <button class="rts-btn btn-primary-4">Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="rts-footer-area footer-three footer-four bg-dark-p pb--55">
+        
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="copyright-area-four area-3 pt--65 mt-65 border-top">
+                    <div class="copyright-area-four area-3 pt--35 mt-65 ">
                         <a href="#" class="logo">
                             <img src="assets/images/logo/wec_logo.png" alt="logo" height="38" width="105">
                         </a>
@@ -2066,14 +2044,14 @@
     <!-- pre loader end -->
 
     <!-- THEME MODE SWITCHER -->
-    <div class="rts-switcher rts-theme-mode">
+    <!-- <div class="rts-switcher rts-theme-mode">
         <div class="rts-darkmode">
             <a id="rts-data-toggle" class="rts-dark-light">
                 <i class="rts-go-dark fal fa-moon"></i>
                 <i class="rts-go-light fa-light fa-sun-bright"></i>
             </a>
         </div>
-    </div>
+    </div> -->
     <!-- THEME MODE SWITCHER END -->
 
     <!-- progress area start -->
@@ -2134,5 +2112,37 @@
 
     </script>
 </body>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "7crX8LQAgRfI8B_-u",
+      });
+   })();
+</script>
+<script type="text/javascript">
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      $("#load").css("display" , "flex");
+      emailjs.sendForm('service_fcurabi', 'template_l0gsiyd', this)
+        .then(function() {
+
+            $("#load").css("display", "none");
+            $("#form-sb").prop("disabled", true);
+            $("#form-info").text("Response sent successfully!");
+
+          
+        }, function(error) {
+            $("#load").css("display" , "none");
+            $("#form-info")
+                .text("Unexpected error occurs.")
+                .css("color", "red");
+
+          
+        });
+    });
+  </script>
 
 </html>
